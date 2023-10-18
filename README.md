@@ -14,7 +14,7 @@ Link the plugin so it can be available for the medusa backend
 Run this after making any changes to the plugin
 
 ```Bash
-    - yar rm -rf node_modules/@medusajs/medusan add @medusajs/medusa
+    - yarn add @medusajs/medusa
     - yarn build
     - rm -rf node_modules/@medusajs/medusa
 ```
