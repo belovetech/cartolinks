@@ -3,10 +3,12 @@
 This repo houses cartolinks related tasks, project or assignment.
 
 # Medusa plugin
+
 Link the plugin so it can be available for the medusa backend
+
 - yarn link
 
-Run this after making any changes to the plugin
+Run this first time after link the plugin or after making any changes to the plugin
 
 ```Bash
 

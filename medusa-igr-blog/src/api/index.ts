@@ -2,7 +2,6 @@ import { Router } from 'express';
 import bodyParser from 'body-parser';
 import { attachBlogRoutes } from './routes';
 import { errorHandler } from '@medusajs/medusa';
-import createPost from '../api/routes/blog/create-post';
 
 export default (rootDirectory, options) => {
   // Create a router instance
@@ -13,17 +12,15 @@ export default (rootDirectory, options) => {
 
   // Blog routes
   const blogRouter = Router();
+  router.use('/blog', blogRouter);
   attachBlogRoutes(blogRouter);
 
   // hello route
-  router.get('/hello', (req, res) => {
+  router.get('/ping', (req, res) => {
     res.json({
       message: 'Welcome to IGR blog!',
     });
   });
-
-  // Create post route
-  router.post('/blog/posts', createPost);
 
   // handle errors
   router.use(errorHandler);
