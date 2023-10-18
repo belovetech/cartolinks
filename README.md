@@ -33,32 +33,32 @@ Step4: Start the server
 
 ## Section B
 
-### How to setup Plugin
+This section contains general setup fro both the plugin and the backend
 
-Run the below commands in the plugin t
+### Medusa plugin
+
+Run the below commands in the plugin
 
 ```Bash
     - npm run build
     - yarn link
-    -  rm -rf node_modules/@medusajs/medusa # to avoid dependency duplicate issue
-```
+    # to avoid dependency duplicate issue
+    -  rm -rf node_modules/@medusajs/medusa
 
-Follow these steps bellow after making any changes to the plugin
+# Follow these steps bellow after making any changes to the plugin
 
-```Bash
     - yarn add @medusajs/medusa
     - yarn build
     - rm -rf node_modules/@medusajs/medusa
 ```
 
-# Medusa backend
-
-- yarn link medusa-custom-plugin
+#### Medusa backend
 
 Run this in the Medusa Backend that uses the plugin
 
 ```bash
-    # Run the first two only once
+    - yarn link medusa-custom-plugin
+
     - add plugin
 
     # Only If migration included in the plugin
